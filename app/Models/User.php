@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function aplications()
     {
-        return $this->hasMany(Aplication::class);
+        return $this->hasMany(Application::class);
     }
 
 }

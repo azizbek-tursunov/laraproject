@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('aplications', function (Blueprint $table) {
+        Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->text('subject');
             $table->text('message');
-            $table->text('file_url');
+            $table->text('file_url')->nullable();
             $table->timestamps();
         });
     }
